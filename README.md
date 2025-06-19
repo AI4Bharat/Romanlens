@@ -5,11 +5,11 @@ This repository contains the code implementation for the paper:
 
 ## Folder Structure
 
-### `llm_logit_lens/`
+### `llm_logit_lens`
 - Contains logit lens analysis.
 - Includes comparison between translation into **Native script** vs **Romanized script**.
 
-### `llm_activation_patching/`
+### `llm_activation_patching`
 - Contains activation patching experiments for further probing model behavior.
 
 ---
