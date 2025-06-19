@@ -1,8 +1,10 @@
 
 
 # Setup
-`pip install -r requirements.txt`. 
+Install dependencies:
 
+```bash
+pip install -r requirements.txt
 
 # Reproducing results
 
