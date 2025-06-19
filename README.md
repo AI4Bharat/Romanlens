@@ -1,8 +1,18 @@
 # Romanlens
 
-This repo contains code implementation for the paper, https://arxiv.org/abs/2502.07424. 
-Here LLM logit lens folder contains logit lens analysis as well as comparing Translation into Native vs Romanized script. 
-llm activation patching folder activation patching experiments.
+This repository contains the code implementation for the paper:  
+[**"ROMANLENS: Investigating Romanization in Multilingual LLMs through the Logit Lens"**](https://arxiv.org/abs/2502.07424)
+
+## Folder Structure
+
+### `llm_logit_lens/`
+- Contains logit lens analysis.
+- Includes comparison between translation into **native script** vs **romanized script**.
+
+### `llm_activation_patching/`
+- Contains activation patching experiments for further probing model behavior.
+
+---
 
 # Citation
 ```
