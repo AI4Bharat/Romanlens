@@ -1,28 +1,20 @@
 import subprocess
 # ["en","hi","ml","ta","te","gu"]
 # ["ml_translit", "hi_translit", "ta_translit","te_translit","gu_translit","hi","ml","ta","te","gu"]
-# List of input and target languages
-# input_langs = [ "fr","de", "hi", "ml"]
+
 target_langs = ["hi","ml","ta","te","gu","ka"]
 
-# Loop through all combinations
-# run from gu - gu_translit onwards
-# "sarvamai/sarvam-2b-v0.5","google/gemma-2-9b-it""bigscience/bloom-7b1",,"google/gemma-2-2b-it","google/gemma-2-2b",
-# "mistralai/Mistral-7B-v0.1","meta-llama/Llama-2-7b-hf","google/gemma-2-9b-it","google/gemma-2-2b-it","google/gemma-2-2b"
+
+# "google/gemma-2-9b-it",
+# "mistralai/Mistral-7B-v0.1","meta-llama/Llama-2-7b-hf","google/gemma-2-9b-it""
 for target_lang in target_langs:
     
             for model in ["meta-llama/Llama-2-13b-chat-hf","meta-llama/Llama-2-7b-hf","mistralai/Mistral-7B-v0.1"]:
                 
-                model1 = ''
-                if model == "google/gemma-2-9b-it":
-                    model1 = 'google'
-                elif model == "meta-llama/Llama-2-7b-hf":
-                    model1 = 'llama_7b'
-                var1 = ''
-                
+               
                 print(f"Processing: Target - {target_lang}")
                 command = f" papermill codes/cloze_translit_all_tokens_final.ipynb out.ipynb  -p target_lang {target_lang}   -p custom_model {model}"
-                # out/translit_bridge/cloze_{target_lang}_shots_1_8bit_translit_bridge.ipynb
+              
                 subprocess.run(command, shell=True, check=True)
                 
 

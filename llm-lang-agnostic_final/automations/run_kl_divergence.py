@@ -1,6 +1,6 @@
 import subprocess
 import json
-# "google/gemma-2-9b-it","meta-llama/Llama-3.1-8B-Instruct"
+# "google/gemma-2-9b-it""
 for model in [ "google/gemma-2-9b" ]:
 
     model_name = model.split("/")[-1]
